@@ -13,7 +13,29 @@ public class StartToday {
 		//프로그래머스 레밸2 문제
 		//Programmers pg = new Programmers();
 		
-		//정렬 알고리즘 예제
-		Sort st = new Sort();
+		//simple, slow 정렬 알고리즘 예제
+		//SimpleSort st = new SimpleSort();
+		
+		//fast 정렬 알고리즘 예제
+		FastSort fs = new FastSort();
+		
+		//재귀메소드 테스트
+		//RecursionMethod rsm = new RecursionMethod();
+	}
+
+	public static void printArray(int input[], int temp) {
+		System.out.println(":: temp 값 : " + temp);
+		for(int ip : input){
+			System.out.print(ip + " ");
+		}
+		System.out.println();
+	}
+	
+
+	public static void printArray(int input[]) {
+		for(int ip : input){
+			System.out.print(ip + " ");
+		}
+		System.out.println();
 	}
 }

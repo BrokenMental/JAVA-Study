@@ -1,14 +1,14 @@
 package test;
 
-public class Sort {
+public class SimpleSort {
 
 	public int input[] = {1, 5, 3, 2, 4}; //정렬에 사용 될 배열
 	public int ilen = input.length; //정렬 시 필요한 배열의 길이
 	public int temp = 0; //정렬 시 필요한 빈 값
 
-	public Sort() {
+	public SimpleSort() {
 		System.out.println("===초기화 상태===");
-		printArray();
+		StartToday.printArray(input, temp);
 
 		//삽입정렬
 		InsertionSort();
@@ -23,6 +23,7 @@ public class Sort {
 	/* :: 삽입정렬
 	 * 1. 현재 확인하는 원소 좌측은 정렬이 된 상태, 우측은 정렬이 되지 않은 상태로 가정
 	 * 2. 현재 확인하는 원소와 좌측의 정렬된 원소들을 확인
+	 * 2-1. 정렬된 원소를 확인할 때 좌측(작은 수)부터 확인할 때 보다 우측(큰 수)의 원소를 확인하면서 변경하면 시간을 줄일 수 있음
 	 * 3. 정렬된 원소 안에 포함되는 값이면 빈 공간에 복사
 	 * 4. 해당하는 위치부터 우측으로 이동
 	 * 5. 빈 공간에 복사한 원소를 해당 위치에 정렬
@@ -39,15 +40,15 @@ public class Sort {
 				input[j] = input[j-1];
 				
 				System.out.println("\n위치 : " + j + "\n옮기는 값 : " + input[j]);
-				printArray();
+				StartToday.printArray(input, temp);
 				System.out.println();
 				
 				j--;
 			}
 
 			input[j] = temp;
-			
-			printArray();
+
+			StartToday.printArray(input, temp);
 			
 		}
 		
@@ -62,7 +63,7 @@ public class Sort {
 		}*/
 		
 		System.out.println("\n===삽입정렬 종료===");
-		printArray();
+		StartToday.printArray(input, temp);
 	}
 	
 	/* :: 버블정렬
@@ -83,11 +84,11 @@ public class Sort {
 			}
 
 			System.out.println("- " + i + "단계 ");
-			printArray();
+			StartToday.printArray(input, temp);
 		}
 
 		System.out.println("\n===버블정렬 종료===");
-		printArray();
+		StartToday.printArray(input, temp);
 	}
 	
 	
@@ -107,7 +108,7 @@ public class Sort {
 		//SelectionSortRight();
 		
 		System.out.println("\n===선택 정렬 종료===");
-		printArray();
+		StartToday.printArray(input, temp);
 	}
 
 	//선택정렬, 맨 오른쪽부터 찾기
@@ -129,7 +130,7 @@ public class Sort {
 			input[max] = temp;
 
 			System.out.println("- " + (-(i - ilen)) + "단계 ");
-			printArray();
+			StartToday.printArray(input, temp);
 		}
 	}
 	
@@ -152,15 +153,8 @@ public class Sort {
 			input[min] = temp;
 
 			System.out.println("- " + i + "단계 ");
-			printArray();
+			StartToday.printArray(input, temp);
 		}
 	}
 	
-	public void printArray() {
-		System.out.println(":: temp 값 : " + temp);
-		for(int ip :input){
-			System.out.print(ip + " ");
-		}
-		System.out.println();
-	}
 }
