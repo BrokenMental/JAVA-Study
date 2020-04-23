@@ -2,8 +2,8 @@ package test;
 
 public class FastSort {
 
-	public int input[] = { 1, 5, 3, 2, 4 }; // 정렬에 사용 될 배열
-	public int tempArray[] = new int[input.length];
+	private int input[] = { 1, 5, 3, 2, 4 }; // 정렬에 사용 될 배열
+	private int tempArray[] = new int[input.length];
 	
 	/* 재귀함수를 이용한 빠른 정렬들
 	 * - MergeSort : 병합 정렬
@@ -22,7 +22,7 @@ public class FastSort {
 		//mergeSort_Recursion2();
 		
 		//퀵 정렬
-		quickSort(0, input.length-1);
+		//quickSort(0, input.length-1);
 
 		StartToday.printArray(input);
 	}

@@ -2,8 +2,6 @@ package test;
 
 public class RecursionMethod {
 	
-	public static int num = 0;
-	
 	public RecursionMethod() {
 		System.out.println("시작");
 		

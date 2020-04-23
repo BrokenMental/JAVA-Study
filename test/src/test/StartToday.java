@@ -17,10 +17,16 @@ public class StartToday {
 		//SimpleSort st = new SimpleSort();
 		
 		//fast 정렬 알고리즘 예제
-		FastSort fs = new FastSort();
+		//FastSort fs = new FastSort();
 		
 		//재귀메소드 테스트
 		//RecursionMethod rsm = new RecursionMethod();
+		
+		//정규표현식 테스트
+		//Regexp re = new Regexp();
+		
+		//검색 알고리즘 예제
+		Search sc = new Search();
 	}
 
 	public static void printArray(int input[], int temp) {
