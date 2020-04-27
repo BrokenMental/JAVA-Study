@@ -26,7 +26,16 @@ public class StartToday {
 		//Regexp re = new Regexp();
 		
 		//검색 알고리즘 예제
-		Search sc = new Search();
+		//Search sc = new Search();
+		
+		//DFS Search 알고리즘 예제
+		//DfsSearch ds = new DfsSearch();
+		
+		//BFS Search 알고리즘 예제
+		BfsSearch bs = new BfsSearch();
+		
+		//Dijkstar 알고리즘 예제
+		//Dijkstra dijk = new Dijkstra();
 	}
 
 	public static void printArray(int input[], int temp) {
