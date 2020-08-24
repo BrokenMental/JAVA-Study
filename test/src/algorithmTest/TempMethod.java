@@ -1,4 +1,4 @@
-package test;
+package algorithmTest;
 
 public class TempMethod {
 

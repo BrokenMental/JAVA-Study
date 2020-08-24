@@ -1,8 +1,8 @@
-package test;
+package algorithmTest;
 
 public class Queue {
 	int[] q;
-	int rear;
+	int back;
 	int front;
 
 	/* - Queue
@@ -11,12 +11,13 @@ public class Queue {
 	 */
 	public Queue(int n) {
 		q = new int[n];
-		rear = -1;
+		back = -1;
 		front = -1;
 	}
 
+	//빈 상태 확인
 	public boolean isEmpty() {
-		if(front == rear){
+		if(front == back){
 			//Queue가 공백인 상태
 			return true;
 		}else {
@@ -25,17 +26,19 @@ public class Queue {
 		} 
 	}
 
+	//후위에 데이터 삽입
 	public void enqueue(int item) {
-		if(rear == q.length-1) {
+		if(back == q.length-1) {
 			//Queue가 full인 상태 데이터 삽입 불가
 			System.out.println("Queue Full");
 			return;
 		}else {
-			rear = rear + 1; //rear를 증가
-			q[rear] = item; //rear 위치에 item 삽입 
+			back = back + 1; //rear를 증가
+			q[back] = item; //rear 위치에 item 삽입 
 		}
 	}
 
+	//전위 데이터를 반환하고 큐에서 삭제
 	public int dequeue() {
 		if(isEmpty()) {
 			//Queue가 공백이면 99를 반환
@@ -43,8 +46,15 @@ public class Queue {
 			return 99;
 		}else {
 			//Queue에 데이터가 있다면 front값을 1증가후 데이터를 반환
-			front = front +1; return q[front];
+			front = front +1;
+			return q[front];
 		}
 	}
 	
+	
+	/*
+	 * public boolean isFull() {
+	 * 
+	 * }
+	 */
 }
